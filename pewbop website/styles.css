@@ -1,0 +1,288 @@
+@font-face {
+    font-family: fourthWall;
+    src: url(FOURTH\ WALL.woff);
+}
+
+@keyframes moveTopbarAnim {
+    from {top: 0vh;}
+    to {top: -10vh;}
+}
+
+@keyframes floatAnim {
+    from{top: -1vh;}
+    to {top: 1vh;}
+}
+
+:root {
+    --text-outline-size: 2px;
+    --neg-text-outline-size: -2px;
+}
+
+h1 {
+    position: static;
+    font-family: fourthWall;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+h2 {
+    position: static;
+    font-family: fourthWall;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+h3 {
+    position: static;
+    font-family: fourthWall;
+    color: grey;
+    text-align: center;
+}
+
+p {
+    font-size: large;
+    margin: auto;
+    position: relative;
+    
+    height: auto;
+    padding: 2vh 0 2vh 0;
+    width: 50vw;
+}
+
+#bottompadding{
+    padding: 0 0 30% 0;
+}
+
+body.blank {
+    background-color: black;
+    padding: 0;
+}
+
+body.main {
+    margin: auto;
+    background-color: black;
+    padding: 0;
+    width: 90vw;
+}
+
+div.topbar {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+}
+
+#move-topbar {
+    animation-name: moveTopbarAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+div.hbox {
+    margin: auto;
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+div.hbox a {
+    padding: 0 1%;
+}
+
+div.devlog-main {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+div.blog {
+    padding: 1%;
+    width: 100%;
+}
+
+div.devlogbar {
+    border: solid;
+    border-color: #FFFFFF;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 1%;
+    
+    width: auto;
+    height: 100%;
+}
+
+div.black {
+    box-sizing: border-box;
+    padding: 0px;
+    background-color: black;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+img.gamelogo {
+    box-sizing: content-box;
+    padding: 5vh, 5vw, 5vw, 5vw;
+    width: auto;
+    height: 75px;
+    image-rendering: pixelated;
+    transition: width 2s, height 0.5s;
+    transition-timing-function: ease-out;
+}
+
+img.gamelogo:hover {
+    height: 100px;
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+img.flower {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 5vh;
+    height: 5vh;
+    image-rendering: pixelated;
+}
+
+img.flower:hover {
+    cursor:help;
+}
+
+#floaty {
+    position: relative;
+    image-rendering: pixelated;
+    animation: floatAnim 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+a.topbar {
+    color: black;
+    font-family: fourthWall;
+    transition: color 0.5s, font-size 0.5;
+}
+
+a.topbar:visited {
+    color:grey;
+}
+
+a.game {
+    box-sizing: border-box;
+    background-color: rgba(1,1,1,0);
+    border: none;
+    font-family: fourthWall;
+    overflow: auto;
+    filter: grayscale(1);
+    transition: filter 0.5s;
+    transition-timing-function: ease-out;
+}
+
+a.game:hover {
+    filter:grayscale(0);
+}
+
+a.game:active {
+    filter:grayscale(0);
+}
+
+.devlog {
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.5s, font-size 0.5;
+    padding: 0 0;
+}
+
+a.devlog:link {
+    color: white;
+}
+
+a.devlog:visited {
+    color: white;
+}
+
+a.devlog:hover {
+    color: lightblue;
+}
+
+a.devlog:active {
+    color: green;
+}
+
+.pagination {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination li a {
+    padding: 5% 10% 5% 10%;
+    display: block;
+    color: white;
+    border: 1px solid white;
+}
+
+.spooky-text {
+    background-color: black;
+    color: black;
+    font-size: 2vh;
+    line-height: 10vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.spooky-text:hover {
+    cursor: default;
+}
+
+.outline {
+    text-shadow: var(--text-outline-size) 0px black, var(--neg-text-outline-size) 0px black, 0px var(--text-outline-size) black, 0px var(--neg-text-outline-size) black;
+}
+
+.gametext {
+    text-shadow: 2px 2px rgb(70, 70, 70);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    list-style-position: inside;
+    font-family: fourthWall;
+    margin: auto;
+    align-content: center;
+}
+
+#center {
+    display: flex;
+    margin:auto;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+}
+
+#activepage {
+    font-size: 24px;
+}
+
+#small {
+    font-size: 12px;
+}
+
+#blog {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    width: 30vw;
+    margin: auto;
+}
