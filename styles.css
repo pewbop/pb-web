@@ -292,6 +292,11 @@ ul.pagination {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.topbar-text {
+    display: flex;
+    flex-direction: row;
+}
+
 .outline {
     text-shadow: var(--text-outline-size) 0px black, var(--neg-text-outline-size) 0px black, 0px var(--text-outline-size) black, 0px var(--neg-text-outline-size) black;
 }
