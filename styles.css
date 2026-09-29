@@ -73,6 +73,11 @@ body.main {
     width: 90vw;
 }
 
+iframe.itchio {
+    display: block;
+    margin: auto;
+}
+
 div.topbar {
     display: flex;
     justify-content: center;
